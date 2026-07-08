@@ -1,0 +1,96 @@
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // ==========================================
+    // ОКНО №1: GAMES
+    // ==========================================
+    const gamesModal = document.getElementById('gamesModal');
+    const openGamesBtn = document.getElementById('openGamesBtn');
+    const closeGamesBtn = document.querySelector('.closeGames');
+
+    // ==========================================
+    // ОКНО №2: ТЕКСТ (ABOUT / CONTACT)
+    // ==========================================
+    const textModal = document.getElementById('textModal');
+    const openAboutBtn = document.getElementById('openAboutBtn');
+    const openContactBtn = document.getElementById('openContactBtn');
+    const closeTextBtn = document.querySelector('.closeText');
+    
+    const modalTitle = document.getElementById('modalTitle');
+    const modalText = document.getElementById('modalText');
+
+    // --- ФУНКЦИЯ ПЛАВНОГО ЗАКРЫТИЯ ---
+    function closeModal(modalElement) {
+        modalElement.classList.add('closing');
+        setTimeout(() => {
+            modalElement.style.display = 'none';
+            modalElement.classList.remove('closing');
+        }, 400);
+    }
+
+    // --- ФУНКЦИЯ ПЕРЕХОДА НА ИГРУ С АНИМАЦИЕЙ ---
+    function transitionToGame() {
+        // Запускаем специальную анимацию перехода
+        gamesModal.classList.add('closing-for-game');
+        
+        // Ждем 0.6 секунд (пока идет анимация), затем переходим
+        setTimeout(() => {
+            window.location.href = 'gameinfo.html';
+        }, 600);
+    }
+
+    // ==========================================
+    // ОТКРЫТИЕ GAMES
+    // ==========================================
+    openGamesBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        gamesModal.classList.remove('closing');
+        gamesModal.classList.remove('closing-for-game'); // Сбрасываем анимацию перехода
+        gamesModal.style.display = 'flex';
+    });
+
+    closeGamesBtn.addEventListener('click', function() {
+        closeModal(gamesModal);
+    });
+
+    window.addEventListener('click', function(e) {
+        if (e.target === gamesModal) {
+            closeModal(gamesModal);
+        }
+    });
+
+    // --- КЛИК ПО КАРТОЧКЕ ИГРЫ (запускает переход с анимацией) ---
+    document.querySelectorAll('.game-card').forEach(function(card) {
+        card.addEventListener('click', function() {
+            transitionToGame();
+        });
+    });
+
+    // ==========================================
+    // ОТКРЫТИЕ ТЕКСТА (ABOUT / CONTACT)
+    // ==========================================
+    openAboutBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        modalTitle.innerText = "About Us";
+        modalText.innerText = "2021 - 2026 DAG ART GAMES. Инди разработчик игр.";
+        textModal.classList.remove('closing');
+        textModal.style.display = 'flex';
+    });
+
+    openContactBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        modalTitle.innerText = "Contact Us";
+        modalText.innerText = "Свяжитесь с нами по email: dagartgames@gmail.com";
+        textModal.classList.remove('closing');
+        textModal.style.display = 'flex';
+    });
+
+    closeTextBtn.addEventListener('click', function() {
+        closeModal(textModal);
+    });
+
+    window.addEventListener('click', function(e) {
+        if (e.target === textModal) {
+            closeModal(textModal);
+        }
+    });
+});

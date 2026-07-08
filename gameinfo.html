@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAG ART GAMES - Страница игры</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+
+    <!-- Кнопка "Назад" на главную -->
+    
+
+    <div class="game-container">
+
+        <!-- ВЕРХНЯЯ ЧАСТЬ (Обложка слева + Текст справа) -->
+        <div class="top-section">
+            
+            <!-- Слева: Обложка (прижата к краю, без кнопок) -->
+            <div class="cover-wrapper">
+                <img id="mainCover" src="img/rocsvg.svg" alt="Обложка игры">
+            </div>
+
+            <!-- Справа: Текст -->
+            <div class="text-block">
+                <h1>REAL OPER CITY</h1>
+                <p>
+                    Опер стиль игра в котором ты можешь включить сгу и фсо. А также тюнинговать авто поставив оперские детали.
+                    <br><br>
+                    
+                </p>
+            </div>
+
+        </div>
+
+        <!-- НИЖНЯЯ ЧАСТЬ (Скриншоты по одному) -->
+        <div class="bottom-section">
+            
+            
+            <div class="screenshot-slider-single">
+                <!-- Кнопка влево -->
+                <button class="scr-btn prev-scr">&#10094;</button>
+
+                <!-- Одна картинка (меняется через JS) -->
+                <div class="single-screen-wrapper">
+                    <img id="currentScreenshot" src="img/screenshot_01.png" alt="Скриншот">
+                </div>
+
+                <!-- Кнопка вправо -->
+                <button class="scr-btn next-scr">&#10095;</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/game"></script>
+</body>
+</html

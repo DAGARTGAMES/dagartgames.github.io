@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAG ART GAMES</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="hero-text">DAG ART GAMES</div>
+
+        <nav class="bottom-menu">
+            <a href="#" id="openGamesBtn">GAMES</a>
+            <a href="#" id="openAboutBtn">ABOUT US</a>
+            <a href="#" id="openContactBtn">CONTACT US</a>
+        </nav>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- ОКНО №1: ИГРЫ (ОСТАВЛЯЕМ КАК ЕСТЬ) -->
+    <!-- ========================================== -->
+    <div id="gamesModal" class="modal">
+        <div class="modal-content modal-games">
+            <span class="close-btn closeGames"></span>
+            
+            <div class="games-section-inside">
+                <div class="games-header">
+                </div>
+                
+                <div class="games-row">
+                    <div class="game-card active-game">
+                        <img src="img/roc.png" alt="Ваша игра">
+                    </div>
+
+                    <div class="game-card">
+                        <img src="img/stub.png" alt="Game 2">
+                    </div>
+                    <div class="game-card">
+                        <img src="img/stub.png" alt="Game 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- ОКНО №2: ДЛЯ ТЕКСТА (ABOUT / CONTACT) -->
+    <!-- ========================================== -->
+    <div id="textModal" class="modal">
+        <div class="modal-content modal-text">
+            <span class="close-btn closeText"></span>
+            
+            <div id="textContent">
+                <h2 id="modalTitle">Заголовок</h2>
+                <p id="modalText">Текст сообщения...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script"></script>
+</body>
+</html>
