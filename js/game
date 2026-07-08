@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Список всех скриншотов (добавьте сюда свои пути)
+    
     const screenshots = [
         'img/screenshot_01.png',
         'img/screenshot_02.png',
@@ -11,30 +11,30 @@ document.addEventListener('DOMContentLoaded', function() {
         
     ];
 
-    let currentIndex = 0; // Индекс текущей показываемой картинки
+    let currentIndex = 0; 
     const imgElement = document.getElementById('currentScreenshot');
     const prevBtn = document.querySelector('.prev-scr');
     const nextBtn = document.querySelector('.next-scr');
 
-    // Функция для обновления картинки на экране
+    
     function updateImage() {
         imgElement.src = screenshots[currentIndex];
     }
 
-    // Кнопка "Вперед"
+    
     nextBtn.addEventListener('click', function() {
         currentIndex++;
         if (currentIndex >= screenshots.length) {
-            currentIndex = 0; // Если дошли до конца, переходим к первой
+            currentIndex = 0; 
         }
         updateImage();
     });
 
-    // Кнопка "Назад"
+    
     prevBtn.addEventListener('click', function() {
         currentIndex--;
         if (currentIndex < 0) {
-            currentIndex = screenshots.length - 1; // Если ушли в минус, идем к последней
+            currentIndex = screenshots.length - 1; 
         }
         updateImage();
     });

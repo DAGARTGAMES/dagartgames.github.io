@@ -1,4 +1,3 @@
-/* Сбрасываем стандартные отступы браузера */
 body, html {
     margin: 0;
     padding: 0;
@@ -7,27 +6,27 @@ body, html {
 }
 
 body {
-    /* Тот самый градиентный фон */
+    
     background: linear-gradient(to bottom, #000000 70%, #2e2e2e 100%);
     
-    /* Центрируем контейнер по вертикали и горизонтали */
+    
     display: flex;             
     justify-content: center;   
     align-items: center;       
 }
 
-/* Контейнер, который держит логотип и меню */
+
 .container {
-    position: relative; /* Чтобы меню позиционировалось относительно него */
+    position: relative; 
     width: 100%;
-    height: 100vh; /* Высота на весь экран */
+    height: 100vh; 
     display: flex;
-    flex-direction: column; /* Выстраиваем логотип и меню в столбик */
-    justify-content: center; /* Центрируем логотип по вертикали */
-    align-items: center;     /* Центрируем по горизонтали */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;     
 }
 
-/* Стили для самого логотипа */
+
 .hero-text {
     font-family: 'VlaShu', cursive, sans-serif;
     font-size: 76px;
@@ -38,21 +37,19 @@ body {
     opacity: 0;
     will-change: transform, opacity, text-shadow;
 
-    /* Анимация появления + яркое свечение */
+    
     animation: 
         fadeInUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards,
         glowPulse 1.8s ease-out 1.4s forwards;
 }
 
-/* --- СТИЛИ ДЛЯ МЕНЮ (КНОПОК) --- */
+
 .bottom-menu {
-    position: absolute; /* Прижимаем меню к низу */
-    bottom: 300px;       /* Расстояние от низа экрана */
+    position: absolute; 
+    bottom: 300px;       
     display: flex;
-    gap: 70px;          /* Расстояние между кнопками */
-    opacity: 0;         /* Изначально невидимое */
-    
-    /* Меню появляется с задержкой, после логотипа */
+    gap: 70px;          
+    opacity: 0;         
     animation: menuFadeIn 1s ease-out 2.5s forwards; 
 }
 
@@ -66,14 +63,14 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Эффект при наведении на кнопку */
+
 .bottom-menu a:hover {
     color: #ffffff;
     text-shadow: 0 0 100px rgb(0, 81, 255);
 }
 
 
-/* --- КЛЮЧЕВЫЕ КАДРЫ АНИМАЦИЙ --- */
+
 
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(25px); }
@@ -91,7 +88,7 @@ body {
     }
 }
 
-/* Анимация появления меню снизу */
+
 @keyframes menuFadeIn {
     from { 
         opacity: 0; 
@@ -103,13 +100,13 @@ body {
     }
 }
 
-/* --- СТИЛИ ДЛЯ МОДАЛЬНОГО ОКНА --- */
 
-/* Фон окна (затемнение) */
+
+
 .modal {
-    display: none; /* Скрыто по умолчанию */
-    position: fixed; /* Поверх всего экрана */
-    z-index: 1000; /* Самый верхний слой */
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
     width: 100%;
@@ -120,13 +117,13 @@ body {
     animation: modalFadeIn 0.4s ease-out forwards;
 }
 
-/* Расширенное модальное окно для игр */
+
 .modal-content.modal-games {
-    background-color: #000000; /* Темный фон внутри окна */
+    background-color: #000000; 
     color: #ffffff;
     padding: 40px 30px 50px 30px;
     border-radius: 16px;
-    max-width: 1100px; /* Широкое окно */
+    max-width: 1100px; 
     width: 90%;
     position: relative;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
@@ -136,7 +133,7 @@ body {
 
 
 
-/* Анимация выплывания окна */
+
 @keyframes modalFadeIn {
     from {
         opacity: 0;
@@ -148,21 +145,21 @@ body {
     }
 }
 
-/* --- Стили для карточек игр ВНУТРИ окна --- */
+
 
 .games-section-inside {
     width: 100%;
 }
 
-/* Ряд с карточками внутри окна */
+
 .games-section-inside .games-row {
     display: flex;
     gap: 150px;
-    justify-content: center; /* Центрируем картинки по горизонтали */
+    justify-content: center; 
     
 }
 
-/* Размер карточек внутри модального окна */
+
 .games-section-inside .game-card {
     flex: 0 0 256px;
     height:356px;
@@ -179,7 +176,7 @@ body {
     display: block;
 }
 
-/* Эффекты серого и цветного */
+
 .games-section-inside .game-card {
     filter: grayscale(100%) brightness(0.6);
 }
@@ -213,7 +210,7 @@ body {
     }
 }
 
-/* Стили для второго (текстового) окна */
+
 .modal-content.modal-text {
     background-color: #111111;
     color: #ffffff;
@@ -241,14 +238,14 @@ body {
     margin-bottom: 1px;
     color: #cccccc;
 }
-/* Стили для ссылок-оберток карточек */
+
 .game-link {
     text-decoration: none;
     display: inline-block;
     transition: transform 0.3s ease;
 }
 
-/* Убираем синее подчеркивание и наследуем цвета */
+
 .game-link .game-card {
     cursor: pointer;
 }
@@ -260,15 +257,15 @@ body {
     0% {
         opacity: 1;
         transform: scale(1);
-        background-color: rgba(0, 0, 0, 0.8); /* Затемнение */
+        background-color: rgba(0, 0, 0, 0.8); 
     }
     100% {
         opacity: 0;
         transform: scale(0.95);
-        background-color: rgba(0, 0, 0, 1); /* Полная чернота перед переходом */
+        background-color: rgba(0, 0, 0, 1); 
     }
 }
-/* ПЛАНШЕТЫ (от 769px до 1024px) */
+
 @media (max-width: 1024px) and (min-width: 769px) {
     .hero-text {
         font-size: 60px;
@@ -288,9 +285,9 @@ body {
     }
 }
 
-/* ТЕЛЕФОНЫ (ширина меньше 768px) */
+
 @media (max-width: 768px) {
-    /* Разрешаем скроллить страницу */
+    
     body, html {
         height: auto;
         overflow-y: auto;
@@ -306,14 +303,14 @@ body {
         min-height: 100vh;
     }
 
-    /* Уменьшаем логотип */
+    
     .hero-text {
         font-size: 40px;
         text-align: center;
         margin-top: 40px;
     }
 
-    /* Меню в столбик для удобства пальцев */
+    
     .bottom-menu {
         position: static;
         flex-direction: column;
@@ -324,7 +321,7 @@ body {
         font-size: 20px;
     }
 
-    /* Модальное окно: карточки в 2 колонки */
+    
     .games-section-inside .games-row {
         flex-wrap: wrap;
         gap: 15px;
@@ -335,7 +332,7 @@ body {
         height: 190px;
     }
     
-    /* Текстовое окно */
+    
     .modal-content.modal-text {
         padding: 20px;
     }
@@ -348,7 +345,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Разрешаем скролл, если контент не влезает */
+    
     body, html {
         height: auto;
         overflow-y: auto;
@@ -363,27 +360,27 @@ body {
         min-height: 100vh;
         padding: 20px;
         box-sizing: border-box;
-        justify-content: center; /* Центрируем контент */
+        justify-content: center; 
     }
 
-    /* ЛОГОТИП: просто делаем текст меньше */
+    
     .hero-text {
-        font-size: 2.5rem; /* Примерно 40px вместо 76px */
+        font-size: 2.5rem; 
         text-align: center;
     }
 
-    /* МЕНЮ: ОСТАВЛЯЕМ АБСОЛЮТНО ТАКИМ ЖЕ (горизонтальное, снизу, с теми же отступами) */
+    
     .bottom-menu {
         position: absolute;
-        bottom: 80px; /* Чуть подняли, чтобы вместить маленький логотип */
+        bottom: 80px; 
         display: flex;
-        flex-direction: row; /* Строго горизонтально */
-        gap: 40px; /* Чуть сузили расстояние, чтобы влезло на экран */
+        flex-direction: row; 
+        gap: 40px; 
         align-items: center;
         width: auto;
     }
 
     .bottom-menu a {
-        font-size: 17px; /* Кнопки остаются крупными, читаемыми */
+        font-size: 17px; 
     }
 }
