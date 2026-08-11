@@ -2466,35 +2466,3 @@ videoheroes.tv, 212428, RESELLER, 064bc410192443d8
 video.unrulymedia.com, 475093422, RESELLER
 rubiconproject.com, 27714, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 23876, RESELLER, 0bfd66d529a55807
-admixer.com, 1091084888, RESELLER
-ads.sber.ru, 1091084888, DIRECT
-ads.vk.com, 1091084888, DIRECT
-adwmg.com, 1091084888, RESELLER
-betweendigital.ru, 1091084888, DIRECT
-bid.mindtos, 1091084888, DIRECT
-bidease.com, 1091084888, DIRECT
-bigo.sg, 1091084888, RESELLER
-buzzoola.com/ru/, 1091084888, DIRECT
-byyd.me, 1091084888, DIRECT
-dsp.videolink.host, 1091084888, DIRECT
-gamoshi.io, 267-b4800, RESELLER
-hybrid.ai, 1091084888, DIRECT
-ignitemediatech.com, 1091084888, RESELLER
-lacunaads.com, 1091084888, DIRECT
-lbs-ru1.ads.betweendigital.com, 1091084888, DIRECT
-mediasniper.ru, 1091084888, DIRECT
-mintegral.com, 1091084888, DIRECT
-mts.ru, 1091084888, DIRECT
-ozon.ru, 1091084888, DIRECT
-persona.ly, 1091084888, DIRECT
-pubmatic.com, 1091084888, RESELLER
-rtb.dvgroup.com, 1091084888, DIRECT
-rtb.zentotem.net, 1091084888, DIRECT
-sape.ru, 1091084888, DIRECT
-soloway.ru, 1091084888, DIRECT
-ssp.al-adtech.com, 1091084888, DIRECT
-target.vk.ru, 1091084888, DIRECT
-upravel.com, 1091084888, DIRECT
-ushareit.com, 1091084888, DIRECT
-vk_eu.rtb.rtblab.net, 1091084888, DIRECT
-zmaticoo.com, 1091084888, DIRECT
